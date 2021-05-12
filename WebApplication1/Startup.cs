@@ -39,7 +39,7 @@ namespace WebApplication1
             services.AddIdentity<ManageUser, IdentityRole>() // để cho nó dùng được UserManger và roleManager
                 .AddEntityFrameworkStores<ManageAppDbContext>()
                 .AddDefaultTokenProviders();
-
+            // add IdentiyServer
             var builder = services.AddIdentityServer(options =>
             {
                 options.Events.RaiseErrorEvents = true;
